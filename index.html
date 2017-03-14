@@ -44,7 +44,7 @@ function onDeviceReady(){
 					var reg=$.parseJSON(datos);
 					var fila=$("#datosTodos");
 					 for(var i in reg){
-					 	fila.append("<tr><td>"+reg[i].id+"</td><td>"+reg[i].Nombre_servicio+"</td><td>"+reg[i].Direccion+"</td><td>"+reg[i].RFC+"</td><td>"+reg[i].Telefono+"</td><td>"+reg[i].Clasificacion+"</td><td>"+reg[i].Foto+"</td><td>"+reg[i].Latitud+"</td><td>"+reg[i].Longitud+"</td></tr>");
+					 	fila.append("<tr><td>"+reg[i].Id_Servicios+"</td><td>"+reg[i].Nombre_servicio+"</td><td>"+reg[i].Direcccion+"</td><td>"+reg[i].RFC+"</td><td>"+reg[i].Telefono+"</td><td>"+reg[i].Clasificacion+"</td><td>"+reg[i].Foto+"</td><td>"+reg[i].Latitud+"</td><td>"+reg[i].Longitud+"</td></tr>");
 					 }
 					$("#tb1").table("refresh");
 				}
@@ -62,7 +62,9 @@ $("#btnConsServID").tap(function (){
 					var reg=$.parseJSON(datos);
 					var fila=$("#datosID");
 					 for(var i in reg){
-					 	fila.append("<tr><td>"+reg[i].id+"</td><td>"+reg[i].Nombre_servicio+"</td><td>"+reg[i].Direccion+"</td><td>"+reg[i].RFC+"</td><td>"+reg[i].Telefono+"</td><td>"+reg[i].Clasificacion+"</td><td>"+reg[i].Foto+"</td><td>"+reg[i].Latitud+"</td><td>"+reg[i].Longitud+"</td></tr>");
+					 fila.append("<tr><td>"+reg[i].Id_Servicios+"</td><td>"+reg[i].Nombre_servicio+"</td><td>"+reg[i].Direcccion+"</td><td>"+reg[i].RFC+"</td><td>"+reg[i].Telefono+"</td><td>"+reg[i].Clasificacion+"</td><td>"+reg[i].Foto+"</td><td>"+reg[i].Latitud+"</td><td>"+reg[i].Longitud+"</td></tr>"); 
+
+					 /*	fila.append("<tr><td>"+reg[i].Id_Servicios+"</td><td>"+reg[i].Nombre_servicio+"</td><td>"+reg[i].Direcccion+"</td><td>"+reg[i].RFC+"</td><td>"+reg[i].Telefono+"</td><td>"+reg[i].Clasificacion+"</td><td>"+reg[i].Foto+"</td><td>"+reg[i].Latitud+"</td><td>"+reg[i].Longitud+"</td></tr>");*/
 					 }
 					$("#tb2").table("refresh");
 				}
@@ -313,6 +315,7 @@ $("#btnEliServID").tap(function (){
 			<label for="idact">ID:</label>
 
 		    <input type="text" id="Act_id" >
+	 		<input type="button" id="btnSeleccionar" value="Seleccionar servicio">
 
 			<input type="text" id="Nombre1" placeholder="Escribe el nombres del servicio">
 			<input type="text" id="Direccion1" placeholder="Escribe la dirección">
